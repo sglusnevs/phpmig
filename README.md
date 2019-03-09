@@ -2,15 +2,14 @@ Phpmig
 ======
 
 [![Build
-Status](https://travis-ci.org/davedevelopment/phpmig.png)](https://travis-ci.org/davedevelopment/phpmig)
+Status](https://travis-ci.org/davedevelopment/phpmig.png)](https://travis-ci.org/sglusnevs/phpmig)
 
 What is it?
 -----------
 
-Phpmig is a (database) migration tool for php, that should be adaptable for use
-with most PHP 5.3+ projects. It's kind of like [doctrine
-migrations][doctrinemigrations], without the [doctrine][doctrine]. Although you
-can use doctrine if you want. And ironically, I use doctrine in my examples.
+This is a fork of Phpmig database migration tool for php by [https://github.com/davedevelopment/phpmig].
+
+It slightly changes filename schema in migrations, allowing for better autocompletion when working with command line.
 
 How does it work?
 -----------------

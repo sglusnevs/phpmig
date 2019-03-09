@@ -206,7 +206,7 @@ abstract class AbstractCommand extends Command
         $versions = array();
         $names = array();
         foreach ($migrations as $path) {
-            if (!preg_match('/^[0-9]+/', basename($path), $matches)) {
+            if (!preg_match('/[0-9]+$/', basename($path), $matches)) {
                 throw new \InvalidArgumentException(sprintf('The file "%s" does not have a valid migration filename', $path));
             }
 
