@@ -151,7 +151,7 @@ class PhpmigApplication
                 throw new \InvalidArgumentException(sprintf('Duplicate migration, "%s" has the same version as "%s"', $path, $versions[$version]->getName()));
             }
     
-            $migrationName = preg_replace('/^[0-9]+_/', '', basename($path));
+            $migrationName = preg_replace('/_[0-9]+\.php$/', '.php', basename($path));
             if (false !== strpos($migrationName, '.')) {
                 $migrationName = substr($migrationName, 0, strpos($migrationName, '.'));
             }
