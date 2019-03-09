@@ -109,7 +109,7 @@ class PhpmigApplication
         }
         
         foreach ($this->migrations as $path) {
-            preg_match('/[0-9]+$/', basename($path), $matches);
+            preg_match('/[0-9]+\.php$/', basename($path), $matches);
             if (!array_key_exists(0, $matches)) {
                 continue;
             }
@@ -141,7 +141,7 @@ class PhpmigApplication
         $versions = array();
         $names = array();
         foreach ($migrations as $path) {
-            if (!preg_match('/[0-9]+$/', basename($path), $matches)) {
+            if (!preg_match('/[0-9]+\.php$/', basename($path), $matches)) {
                 throw new \InvalidArgumentException(sprintf('The file "%s" does not have a valid migration filename', $path));
             }
     

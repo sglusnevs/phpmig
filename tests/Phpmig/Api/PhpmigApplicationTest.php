@@ -347,7 +347,7 @@ CODE;
             if ($class_names !== null && isset($class_names[$i])) {
                 $class_name = $class_names[$i];
             } else {
-                $class_name = str_replace(' ', '', ucwords(str_replace('_', ' ', preg_replace('/^[0-9]+_/', '', basename($file, ".php")))));
+                $class_name = str_replace(' ', '', ucwords(str_replace('_', ' ', preg_replace('/_[0-9]+$/', '', basename($file, ".php")))));
             }
             file_put_contents($file, sprintf($class, $class_name, $extends));
         }
