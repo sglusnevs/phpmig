@@ -206,7 +206,7 @@ abstract class AbstractCommand extends Command
         $versions = array();
         $names = array();
         foreach ($migrations as $path) {
-            if (!preg_match('/[0-9]+\.php$/', basename($path), $matches)) {
+            if (!preg_match('/[0-9]+$/', basename($path, '.php'), $matches)) {
                 throw new \InvalidArgumentException(sprintf('The file "%s" does not have a valid migration filename', $path));
             }
 
@@ -215,7 +215,7 @@ abstract class AbstractCommand extends Command
                 throw new \InvalidArgumentException(sprintf('Duplicate migration, "%s" has the same version as "%s"', $path, $versions[$version]->getName()));
             }
 
-            $migrationName = preg_replace('/[0-9]+_\.php$/', '.php', basename($path));
+            $migrationName = preg_replace('/_[0-9]+$/', '', basename($path, '.php'));
             if (false !== strpos($migrationName, '.')) {
                 $migrationName = substr($migrationName, 0, strpos($migrationName, '.'));
             }
