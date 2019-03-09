@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Simple migrations system for php",
     "keywords": ["migrations", "database migrations"],
-    "homepage": "http://github.com/davedevelopment/phpmig",
+    "homepage": "http://github.com/sglusnevs/phpmig",
     "license": "MIT",
     "authors": [{
         "name": "Dave Marshall",
