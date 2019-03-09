@@ -1,5 +1,5 @@
 {
-    "name": "davedevelopment/phpmig",
+    "name": "sglusnevs/phpmig",
     "type": "library",
     "description": "Simple migrations system for php",
     "keywords": ["migrations", "database migrations"],
