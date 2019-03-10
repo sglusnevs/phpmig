@@ -64,7 +64,7 @@ same name as the file in CamelCase.
 
 ```bash
 $ phpmig generate AddRatingToLolCats
-+f ./migrations/20111018171411_AddRatingToLolCats.php
++f ./migrations/AddRatingToLolCats_20111018171411.php
 $ phpmig status
 
  Status   Migration ID    Migration Name 

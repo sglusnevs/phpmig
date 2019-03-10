@@ -1,7 +1,7 @@
 {
     "name": "sglusnevs/phpmig",
     "type": "library",
-    "description": "Simple migrations system for php",
+    "description": "A fork of phpmig with migrations named <name>_<timestamp>.php for CLI autocompletion",
     "keywords": ["migrations", "database migrations"],
     "homepage": "http://github.com/sglusnevs/phpmig",
     "license": "MIT",
